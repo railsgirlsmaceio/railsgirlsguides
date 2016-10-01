@@ -4,7 +4,10 @@ title: Funcionalidades de uma área de comentários para a app Rails Girls
 permalink: commenting
 ---
 # Área de comentários para a app Rails Girls
+
 *Criado por Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
+
+*Traduzido por Maujor, [site do Maujor](http://www.maujor.com)*
 
 Vamos aprender como criar uma área de comentários para nossa app *railsgirls* ideas.
 
@@ -24,6 +27,7 @@ rake db:migrate
 ## *2.*Adicione relacionamentos aos modelos
 
 Você precisa assegurar que Rails seja capaz de identificar a conexão entre objetos (ideas e comentários). De vez que uma idea pode ter vários comentários precisamos assegurar que o modelo ideas sabe disso. Abra app/models/idea.rb e logo após a linha:
+{% highlight ruby %}
 class Idea &lt; ActiveRecord::Base
 {% endhighlight %}
 acrescente o seguinte:
@@ -43,7 +47,7 @@ belongs_to :idea
 
 ## *3.*Mostrar o formulário de comentários e os comentários existentes
 
-Abra app/views/ideas/show.html.erb é depois da tag de imagem (image_tag) 
+Abra app/views/ideas/show.html.erb é depois da tag de imagem (image_tag)
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
@@ -62,7 +66,7 @@ acrescente a seguinte linha:
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-Em `app/controllers/ideas_controller.rb` acrescente a ação mostrar logo após a linha:  
+Em `app/controllers/ideas_controller.rb` acrescente a ação mostrar logo após a linha:
 {% highlight ruby %}
 @comments = @idea.comments.all
 @comment = @idea.comments.build

@@ -1,17 +1,16 @@
 ---
 layout: default
-title: Test Driven Development
+title: Desenvolvimento Guiado por Testes
 permalink: test-driven-development
 ---
 
-# Test Driven Development
+# Desenvolvimento Guiado por Testes
 
 *Escrito por Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*
 
 *Traduzido por Marina Limeira, [@marinalimeira_](https://twitter.com/marinalimeira_)
 
-Este exercício objetiva em te ensinar sobre o que nós estamos falando quando dizemos
-*Test Driven Development* (TDD).
+Este exercício tem como objetivo te ensinar o que quer dizer *Desenvolvimento Guiado por Testes* (TDD).
 
 ## Background information
 
@@ -92,13 +91,13 @@ isto, iremos então fazer a *subtração de dígitos* como em *IV*.
 
 Nós encorajamos fazer este exercícios em um grupo de 2-4 pessoas. As regras que
 governam como isto funcionam são muito similares a como programadores fazem *programação
-em par* e este exercício tem a intenção de te dar alguma exposição a esta prática.
+em par* e este exercício tem a intenção de te mostrar esta prática.
 
-- Cada grupo possui uma **pessoa no comando** com laptop e *Sublime Text* prontos.
-- Todos os outros devem **fechar seus laptops** e sentar ao redor de quem está no comando.
+- Cada grupo possui uma **pessoa no comando** com um notebook e o editor de texto *Sublime Text* prontos.
+- Todos os outros devem **fechar seus notebooks** e sentar ao redor de quem está no comando.
 - Vocês todos irão regurlarmente levantar-se e **rodar as cadeiras** para que a próxima
 pessoa esteja no comando. Os passos abaixo explicam quando fazer isso.
-- Escolha alguém para começar no comando. Aquela pessoa deverá seguir todas os passos
+- Escolha alguém para começar no comando. Aquela pessoa deverá seguir todos os passos
 até que a troca de assentos seja mencionada.
 
 **Coach:** Explique como programação em par pode ser útil.
@@ -146,7 +145,7 @@ Expected: "I"
 
 Reserve um momento para ler esta saída com cuidado. Há bastante informação.
 
-Seus teste agora estão **vermelhos**, ou seja, um ou mais testes estão falhando. Você pode
+Seus testes agora estão **vermelhos**, ou seja, um ou mais testes estão falhando. Você pode
 perceber que você possui um teste falhando checando o resumo no final: `1 tests, 1
 assertions, 1 failures, 0 errors, 0 skips`.
 
@@ -161,8 +160,8 @@ mudança é apenas uma condição extra `if` ou um caractere. De fato, isso é e
 você geralmente não deveria escrever código desnecessário. Se você está preso,
 você pode pedir a opinião de pessoas próximas.
 
-Here is a way that you could make the first test pass, just to get you into the
-swing of things:
+Aqui está uma maneira de como você pode fazer este primeiro teste passar, apenas
+para te deixar no ritmo das coisas:
 
 {% highlight ruby %}
 def roman(n)
@@ -170,14 +169,13 @@ def roman(n)
 end
 {% endhighlight %}
 
-If this seems facetious, you're right but it is a valid solution because it
-makes all the tests pass. When your tests all pass, we call them **green**.
+Isso pode parecer engraçado, mas é uma solução válida porque faz todos os testes
+passarem. Quando todos os testes passam, nós chamamos de **verde**.
 
 ## *3.* Refatore seu código
 
-Look over the code and decide if it's a good idea to **refactor** it (clean up
-the code and make it easier to read). If you decide to not to refactor, skip
-this step.
+Olhe seu código e decida se é uma boa ideia **refatorar-lo** (limpar o código e
+deixá-lo mais fácil de ler). Se você não decidir refatorar, pule este passo.
 
 **Dica**: É uma boa hora para refatorar quando você notar *repetição*. Se você preferir,
 pode também refatorar os testes.
@@ -189,26 +187,24 @@ Rode seus testes após refatorar. Se eles falharem, você acidentalmente quebrou
 
 ## *4.* Escreva um novo teste que falha
 
-If you all agree that the code should work in general, and you can't think of
-any more cases to test and everything passes, you can stop here. You win!
+Se vocês todos concordam que o código deve funcionar no geral, e você não consegue pensar
+em outros casos de teste e tudo passa, você pode parar por aqui. Você ganhou!
 
-Otherwise, your last job in the hot seat is to write a new test. We currently have
-a test that checks that the number one is turned into an `"I"`, but we need more tests
-to verify that all other numbers convert as expected. When you add a new test for another
-number, be sure to run the tests to find your test fail. If you're stuck, there are
-somesuggestions at the bottom of this page.
+Caso contrário, seu último trabalho no comando é escrever um novo teste. Nós atualmente 
+temos um teste que checa se o número 1 é transformado em `"I"`, mas nós precisamos
+adicionar mais testes para verificar que todos os outros números são convertidos como esperado.
+Quando você adicionar um novo teste para outro número, lembre-se de rodar os testes para
+ver seu teste falhando. Se você está preso, existem algumas sugestões no final da página.
 
 Você pode copiar e colar o teste anterior e alterá-lo. Você pode altera-lo para
 ser o que você quiser. Seus testes deverão p
 
+Você pode copiar e colar o texto anterior e alterá-lo. Você pode alterá-lo para
+ser qualquer coisa que você quiser. Seus testes devem provavelmente testar alguma
+outra situação complicada, mas se você sente em voltar e adicionar um caso mais simples,
+está ok desde que o teste falhe.
 
-You can copy and paste the previous test and alter it. You can change it to be
-anything you like. Your tests should probably test the next trickiest
-situation, but if you feel like going back and adding a simpler case, that's
-fine too as long as it fails.
-
-The other members of the group can chime in and ask questions or spot problems
-for you.
+Os outros membros do grupo podem concordar e fazer perguntas ou apontar problemas para você.
 
 Aqui está um exemplo de como expandir seus casos de teste:
 
@@ -226,16 +222,16 @@ end
 
 Seus testes agora estão **vermelhos** de novo; ao menos um está falhando.
 
-**Stand up** and offer the hot seat to the next person in your group.
+**Levante-se** e ofereça o comando para a próxima pessoa o seu grupo.
 
 ## Repita!
 
-Keep repeating steps 2 through 4, making sure to continue switching at the end
-of step 4. You are done when your team feels like they are done.
+Continue repetindo os passos 2 a 4, tendo certeza de continuar trocando ao fim do passo 4.
+Você terá terminado quando seu time sentir que está tudo pronto.
 
-Don't worry about finishing all cases. The goal is to practice the steps and
-learn to work together in this way. Get used to writing tests as well as
-getting them to pass. Practice. Good luck!
+Não se preocupe em finalizar todos os acasos. O objetivo é praticar os passos e aprender
+a trabalharem juntos dessa maneira. Se acostume a escrever testes e faze-los passar.
+Pratique. Boa sorte!
 
 ## Dicas
 
@@ -252,11 +248,11 @@ Entrada    | Saída
  `7`       | `"VII"`
  `10`      | `"X"`
 
-If you get this far, you earn partial credit. Romans used to use `IIII` for 4.
-That's why 4 on an analog watch is written as `IIII`. Later on, they added
-*subtractive* digits. These are harder to program. Once you feel confident that
-your program works with all the numbers above, try dealing with subtractive
-digits.
+Se você chegou até aqui, você ganha crédito parcial. Romanos costumavam utilizar `IIII` para 4.
+É por isso que 4 em um relógio analogico é escrito como `IIII`. Mais tarde, foram adicionados
+dígitos *subtrativos*. Estes são mais difíceis de programar. Quando você se sentir
+confiante de que seu programa funciona para todos os números acima, tente lidar com 
+dígitos subtrativos.
 
 :--------- | :-----------
 Entrada    | Saída
